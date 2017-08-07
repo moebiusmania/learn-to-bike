@@ -1,0 +1,25 @@
+{
+  "name": "learn-to-bike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/moebiusmania/learn-to-bike",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently -k \"npm run serve\" \"webpack -w\"",
+    "serve": "http-server -s -p 8081 ./dist",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.0",
+    "gh-pages": "1.0.0",
+    "http-server": "0.10.0",
+    "uglify-es-webpack-plugin": "0.10.0",
+    "webpack": "3.4.1",
+    "webpack-notifier": "1.5.0"
+  },
+  "dependencies": {
+    "@cycle/dom": "18.0.0",
+    "@cycle/run": "3.1.0"
+  }
+}
